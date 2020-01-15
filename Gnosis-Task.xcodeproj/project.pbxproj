@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC0730C223CF32A500A81D91 /* AccountVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0730C123CF32A500A81D91 /* AccountVC.storyboard */; };
+		EC0730C423CF32C600A81D91 /* MessageSignVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0730C323CF32C600A81D91 /* MessageSignVC.storyboard */; };
 		ECA9745723CCD9A5006A2FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */; };
 		ECA9745923CCD9A5006A2FA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745823CCD9A5006A2FA8 /* SceneDelegate.swift */; };
 		ECA9745B23CCD9A5006A2FA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745A23CCD9A5006A2FA8 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC0730C123CF32A500A81D91 /* AccountVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountVC.storyboard; sourceTree = "<group>"; };
+		EC0730C323CF32C600A81D91 /* MessageSignVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MessageSignVC.storyboard; sourceTree = "<group>"; };
 		ECA9745323CCD9A5006A2FA8 /* Gnosis-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gnosis-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA9745823CCD9A5006A2FA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				ECA9745823CCD9A5006A2FA8 /* SceneDelegate.swift */,
 				ECA9745A23CCD9A5006A2FA8 /* ViewController.swift */,
 				ECA9745C23CCD9A5006A2FA8 /* Main.storyboard */,
+				EC0730C123CF32A500A81D91 /* AccountVC.storyboard */,
+				EC0730C323CF32C600A81D91 /* MessageSignVC.storyboard */,
 				ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */,
 				ECA9746423CCD9A6006A2FA8 /* LaunchScreen.storyboard */,
 				ECA9746723CCD9A6006A2FA8 /* Info.plist */,
@@ -129,8 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECA9746623CCD9A6006A2FA8 /* LaunchScreen.storyboard in Resources */,
+				EC0730C223CF32A500A81D91 /* AccountVC.storyboard in Resources */,
 				ECA9746323CCD9A6006A2FA8 /* Assets.xcassets in Resources */,
 				ECA9745E23CCD9A5006A2FA8 /* Main.storyboard in Resources */,
+				EC0730C423CF32C600A81D91 /* MessageSignVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
