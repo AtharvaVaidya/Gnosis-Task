@@ -21,6 +21,8 @@
 		EC57BB4023D1FBF30024BF5A /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57BB3F23D1FBF30024BF5A /* Storyboarded.swift */; };
 		EC6CAC3323D206F4001D4616 /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CAC3223D206F4001D4616 /* AccountCoordinator.swift */; };
 		EC6CAC3523D20CA0001D4616 /* MessageSignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CAC3423D20CA0001D4616 /* MessageSignVC.swift */; };
+		EC7FB30A23D2461200973854 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FB30923D2461200973854 /* VerificationViewModel.swift */; };
+		EC7FB30C23D2487700973854 /* VerificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FB30B23D2487700973854 /* VerificationModel.swift */; };
 		ECA9745723CCD9A5006A2FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */; };
 		ECA9745B23CCD9A5006A2FA8 /* SetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745A23CCD9A5006A2FA8 /* SetupVC.swift */; };
 		ECA9745E23CCD9A5006A2FA8 /* SetupVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9745C23CCD9A5006A2FA8 /* SetupVC.storyboard */; };
@@ -31,6 +33,7 @@
 		ECDD316623D2253800BF8FEB /* QRCodeViewerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */; };
 		ECDD316823D22BBE00BF8FEB /* QRCodeViewerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD316723D22BBE00BF8FEB /* QRCodeViewerCoordinator.swift */; };
 		ECDD316A23D2372200BF8FEB /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD316923D2372200BF8FEB /* Address.swift */; };
+		ECDD317023D23DD600BF8FEB /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD316F23D23DD600BF8FEB /* VerificationVC.swift */; };
 		ECEBBA6C23D20F6F0070E836 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBA6623D20F6F0070E836 /* BigInt.framework */; };
 		ECEBBA6D23D20F6F0070E836 /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBA6723D20F6F0070E836 /* secp256k1.framework */; };
 		ECEBBA6E23D20F6F0070E836 /* web3swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBA6823D20F6F0070E836 /* web3swift.framework */; };
@@ -57,6 +60,8 @@
 		EC57BB3F23D1FBF30024BF5A /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		EC6CAC3223D206F4001D4616 /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
 		EC6CAC3423D20CA0001D4616 /* MessageSignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSignVC.swift; sourceTree = "<group>"; };
+		EC7FB30923D2461200973854 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
+		EC7FB30B23D2487700973854 /* VerificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationModel.swift; sourceTree = "<group>"; };
 		ECA9745323CCD9A5006A2FA8 /* Gnosis-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gnosis-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA9745A23CCD9A5006A2FA8 /* SetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupVC.swift; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 		ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerModel.swift; sourceTree = "<group>"; };
 		ECDD316723D22BBE00BF8FEB /* QRCodeViewerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerCoordinator.swift; sourceTree = "<group>"; };
 		ECDD316923D2372200BF8FEB /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		ECDD316F23D23DD600BF8FEB /* VerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
 		ECEBBA6623D20F6F0070E836 /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BigInt.framework; path = Carthage/Build/iOS/BigInt.framework; sourceTree = SOURCE_ROOT; };
 		ECEBBA6723D20F6F0070E836 /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = secp256k1.framework; path = Carthage/Build/iOS/secp256k1.framework; sourceTree = SOURCE_ROOT; };
 		ECEBBA6823D20F6F0070E836 /* web3swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = web3swift.framework; path = Carthage/Build/iOS/web3swift.framework; sourceTree = SOURCE_ROOT; };
@@ -159,16 +165,11 @@
 			isa = PBXGroup;
 			children = (
 				ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */,
-				EC57BB3323D1CAF00024BF5A /* RoundedButton.swift */,
-				ECDD316923D2372200BF8FEB /* Address.swift */,
-				EC57BB4123D200B40024BF5A /* Coordinator */,
-				EC57BB4223D200BD0024BF5A /* Account VC */,
-				EC57BB4323D200CF0024BF5A /* Setup VC */,
-				ECEBBA7923D222C90070E836 /* Message Sign VC */,
-				ECDD316723D22BBE00BF8FEB /* QRCodeViewerCoordinator.swift */,
-				ECD72E1823D2242D00952A18 /* QRCodeViewerVC.swift */,
-				ECDD316323D2252200BF8FEB /* QRCodeViewerViewModel.swift */,
-				ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */,
+				ECDD316D23D23DB800BF8FEB /* Model */,
+				ECDD316C23D23DB200BF8FEB /* UI */,
+				ECDD316F23D23DD600BF8FEB /* VerificationVC.swift */,
+				EC7FB30923D2461200973854 /* VerificationViewModel.swift */,
+				EC7FB30B23D2487700973854 /* VerificationModel.swift */,
 				ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */,
 				ECA9746423CCD9A6006A2FA8 /* LaunchScreen.storyboard */,
 				ECA9746723CCD9A6006A2FA8 /* Info.plist */,
@@ -180,6 +181,46 @@
 				ECEBBA6823D20F6F0070E836 /* web3swift.framework */,
 			);
 			path = "Gnosis-Task";
+			sourceTree = "<group>";
+		};
+		ECDD316B23D23DA400BF8FEB /* QR Code Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD316723D22BBE00BF8FEB /* QRCodeViewerCoordinator.swift */,
+				ECD72E1823D2242D00952A18 /* QRCodeViewerVC.swift */,
+				ECDD316323D2252200BF8FEB /* QRCodeViewerViewModel.swift */,
+				ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */,
+			);
+			path = "QR Code Viewer";
+			sourceTree = "<group>";
+		};
+		ECDD316C23D23DB200BF8FEB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD316E23D23DC000BF8FEB /* Generic Components */,
+				EC57BB4123D200B40024BF5A /* Coordinator */,
+				EC57BB4223D200BD0024BF5A /* Account VC */,
+				EC57BB4323D200CF0024BF5A /* Setup VC */,
+				ECEBBA7923D222C90070E836 /* Message Sign VC */,
+				ECDD316B23D23DA400BF8FEB /* QR Code Viewer */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		ECDD316D23D23DB800BF8FEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD316923D2372200BF8FEB /* Address.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECDD316E23D23DC000BF8FEB /* Generic Components */ = {
+			isa = PBXGroup;
+			children = (
+				EC57BB3323D1CAF00024BF5A /* RoundedButton.swift */,
+			);
+			path = "Generic Components";
 			sourceTree = "<group>";
 		};
 		ECEBBA7923D222C90070E836 /* Message Sign VC */ = {
@@ -316,10 +357,13 @@
 				EC57BB3823D1CC2B0024BF5A /* AccountModel.swift in Sources */,
 				ECDD316423D2252200BF8FEB /* QRCodeViewerViewModel.swift in Sources */,
 				EC6CAC3323D206F4001D4616 /* AccountCoordinator.swift in Sources */,
+				ECDD317023D23DD600BF8FEB /* VerificationVC.swift in Sources */,
 				EC57BB3A23D1F8070024BF5A /* Coordinator.swift in Sources */,
 				EC57BB3223D1C6F50024BF5A /* AccountVC.swift in Sources */,
 				ECA9745723CCD9A5006A2FA8 /* AppDelegate.swift in Sources */,
+				EC7FB30C23D2487700973854 /* VerificationModel.swift in Sources */,
 				EC57BB2C23D09B810024BF5A /* SetupModel.swift in Sources */,
+				EC7FB30A23D2461200973854 /* VerificationViewModel.swift in Sources */,
 				ECDD316A23D2372200BF8FEB /* Address.swift in Sources */,
 				EC57BB4023D1FBF30024BF5A /* Storyboarded.swift in Sources */,
 			);
