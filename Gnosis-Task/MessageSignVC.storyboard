@@ -15,12 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taJ-JO-B6I">
-                                <rect key="frame" x="159" y="233.5" width="96" height="30"/>
-                                <state key="normal" title="Sign Message"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oFf-Sh-SuG">
-                                <rect key="frame" x="20" y="144" width="374" height="69.5"/>
+                                <rect key="frame" x="20" y="84" width="374" height="69.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zz-b4-x09">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -36,13 +32,30 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO5-Ej-OSN" customClass="RoundedButton" customModule="Gnosis_Task" customModuleProvider="target">
+                                <rect key="frame" x="52" y="186" width="310.5" height="50"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.14117647059999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nz6-du-81j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Sign">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="taJ-JO-B6I" firstAttribute="top" secondItem="oFf-Sh-SuG" secondAttribute="bottom" constant="20" id="5rg-Bz-h5I"/>
-                            <constraint firstItem="taJ-JO-B6I" firstAttribute="centerX" secondItem="oFf-Sh-SuG" secondAttribute="centerX" id="dDG-Jt-BOt"/>
-                            <constraint firstItem="oFf-Sh-SuG" firstAttribute="top" secondItem="Vcq-wi-gyh" secondAttribute="top" constant="100" id="lfz-2Q-yOa"/>
+                            <constraint firstItem="HO5-Ej-OSN" firstAttribute="top" secondItem="oFf-Sh-SuG" secondAttribute="bottom" constant="32.5" id="Ugh-d5-065"/>
+                            <constraint firstItem="oFf-Sh-SuG" firstAttribute="top" secondItem="Vcq-wi-gyh" secondAttribute="top" constant="40" id="lfz-2Q-yOa"/>
                             <constraint firstItem="oFf-Sh-SuG" firstAttribute="leading" secondItem="Vcq-wi-gyh" secondAttribute="leading" constant="20" id="lyF-T0-LL0"/>
+                            <constraint firstItem="HO5-Ej-OSN" firstAttribute="centerX" secondItem="oFf-Sh-SuG" secondAttribute="centerX" id="qcS-J3-ztI"/>
+                            <constraint firstItem="HO5-Ej-OSN" firstAttribute="width" secondItem="Pqo-Q2-aYG" secondAttribute="width" multiplier="0.75" id="tuM-2k-H95"/>
                             <constraint firstItem="Vcq-wi-gyh" firstAttribute="trailing" secondItem="oFf-Sh-SuG" secondAttribute="trailing" constant="20" id="wPN-r8-HBp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vcq-wi-gyh"/>

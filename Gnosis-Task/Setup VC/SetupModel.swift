@@ -9,5 +9,5 @@
 import Foundation
 
 class SetupModel {
-    @Published var privateKeyText: String = "9e4c9c9a98647af0d130502af8dd01b8f71c9b03fe382d81876cd7a1a9028505"
+    @Published var privateKeyText: String = ""
 }

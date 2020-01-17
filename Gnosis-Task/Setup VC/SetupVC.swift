@@ -10,10 +10,10 @@ import UIKit
 import web3swift
 import Combine
 
-class SetupVC: UIViewController {
+final class SetupVC: UIViewController, Storyboarded {
     @IBOutlet weak var textField: UITextField?
     private let viewModel = SetupViewModel()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -62,7 +62,15 @@ extension SetupVC: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        viewModel.changedPrivateKey(text: textField.text ?? "")
+        guard let text = textField.text else {
+            return true
+        }
+        
+        if text.isEmpty {
+            print("Replacing characters called. Text: \(string)")
+            viewModel.changedPrivateKey(text: string)
+        }
+        
         return true
     }
 }

@@ -32,6 +32,19 @@ class AccountViewModel {
     init(model: AccountModel) {
         self.model = model
         
+        downloadBalance()
+    }
+    
+    func bindToBalance(label: UILabel) {
+        model.$balance
+        .receive(on: RunLoop.main)
+        .sink { [unowned label] (balance) in
+            label.text = balance
+        }
+        .store(in: &cancellables)
+    }
+    
+    private func downloadBalance() {
         generateAccountBalance(address: model.address)
         .receive(on: RunLoop.main)
         .sink(receiveCompletion: { (completion) in
@@ -46,15 +59,6 @@ class AccountViewModel {
             }
             
             model.balance = balance
-        }
-        .store(in: &cancellables)
-    }
-    
-    func bindToBalance(label: UILabel) {
-        model.$balance
-        .receive(on: RunLoop.main)
-        .sink { [unowned label] (balance) in
-            label.text = balance
         }
         .store(in: &cancellables)
     }
