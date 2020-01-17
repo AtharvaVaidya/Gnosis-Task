@@ -16,6 +16,8 @@ class QRCodeViewerViewModel {
         self.model = model
     }
     
+    var message: String { model.message }
+    
     func makeQRCodeImage(size: CGSize) -> Future<UIImage, QRCodeGenerationError> {
         return Future<UIImage, QRCodeGenerationError> { [weak model = self.model] promise in
             guard let model = model else {
@@ -23,7 +25,7 @@ class QRCodeViewerViewModel {
                 return
             }
             
-            let backgroundQueue = DispatchQueue.global(qos: .default)
+            let backgroundQueue = DispatchQueue.global(qos: .userInteractive)
             
             backgroundQueue.async {
                 let filter = CIFilter.qrCodeGenerator

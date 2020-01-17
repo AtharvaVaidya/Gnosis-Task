@@ -42,21 +42,29 @@ class QRCodeViewerVC: UIViewController {
         title = "Signature"
         
         qrCodeView.contentMode = .scaleAspectFit
+        
+        messageLabel.text = "Message: \(viewModel.message)"
     }
     
     private func addSubviews() {
         view.addSubview(qrCodeView)
+        view.addSubview(messageLabel)
     }
     
     private func makeConstraints() {
         qrCodeView.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
         
         let layoutGuide = view.safeAreaLayoutGuide
         
         let constraints = [qrCodeView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor),
                            qrCodeView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor),
-                           qrCodeView.topAnchor.constraint(equalTo: layoutGuide.topAnchor),
-                           qrCodeView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor)]
+                           qrCodeView.centerYAnchor.constraint(equalTo: layoutGuide.centerYAnchor),
+                           qrCodeView.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+                           qrCodeView.heightAnchor.constraint(equalTo: layoutGuide.heightAnchor, multiplier: 0.5),
+                           messageLabel.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor, constant: 20),
+                           messageLabel.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor, constant: -20),
+                           messageLabel.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: 20)]
         
         NSLayoutConstraint.activate(constraints)
     }
