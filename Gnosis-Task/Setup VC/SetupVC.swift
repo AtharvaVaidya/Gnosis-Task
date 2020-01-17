@@ -16,13 +16,7 @@ final class SetupVC: UIViewController, Storyboarded {
     private let viewModel = SetupViewModel()
     
     var coordinator: SetupCoordinator?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        textField?.delegate = self
-    }
-    
+
     @IBAction func privateKeyChanged(_ sender: Any) {
         viewModel.changedPrivateKey(text: textField?.text ?? "")
     }
@@ -46,24 +40,5 @@ final class SetupVC: UIViewController, Storyboarded {
         alertController.addAction(okAction)
         
         present(alertController, animated: true, completion: nil)
-    }
-}
-
-extension SetupVC: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        viewModel.changedPrivateKey(text: textField.text ?? "")
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = textField.text else {
-            return true
-        }
-        
-        if text.isEmpty {
-            print("Replacing characters called. Text: \(string)")
-            viewModel.changedPrivateKey(text: string)
-        }
-        
-        return true
     }
 }

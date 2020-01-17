@@ -38,12 +38,14 @@ class QRCodeViewerVC: UIViewController {
     }
     
     private func setupView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         title = "Signature"
         
         qrCodeView.contentMode = .scaleAspectFit
         
-        messageLabel.text = "Message: \(viewModel.message)"
+        messageLabel.text = "Message: \"\(viewModel.message)\""
+        messageLabel.font = .preferredFont(forTextStyle: .headline)
+        messageLabel.textColor = .label
     }
     
     private func addSubviews() {
