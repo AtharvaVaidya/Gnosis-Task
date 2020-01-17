@@ -7,20 +7,11 @@
 //
 
 import UIKit
-import Combine
 import web3swift
 
-class SetupCoordinator: Coordinator {
-    var childCoordinators: [Coordinator] = []
-    
+class SetupCoordinator: Coordinator {    
     var navigationController: UINavigationController
-    
-    private let isCompletedPublisher = PassthroughSubject<Bool, Never>()
-    
-    var isComplete: AnyPublisher<Bool, Never> {
-        return isCompletedPublisher.prefix(1).eraseToAnyPublisher()
-    }
-    
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
