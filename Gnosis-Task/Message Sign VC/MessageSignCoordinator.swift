@@ -35,8 +35,8 @@ class MessageSignCoordinator: Coordinator {
         navigationController.pushViewController(messageSignVC, animated: true)
     }
     
-    func showQRCode(data: Data) {
-        let qrCodeViewerCoordinator = QRCodeViewerCoordinator(qrCodeData: data, navigationController: navigationController)
+    func showQRCode(data: Data, message: String) {
+        let qrCodeViewerCoordinator = QRCodeViewerCoordinator(qrCodeData: data, message: message, navigationController: navigationController)
         qrCodeViewerCoordinator.start()
     }
 }

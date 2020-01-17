@@ -10,15 +10,17 @@ import UIKit
 
 class QRCodeViewerCoordinator: Coordinator {
     let data: Data
+    let message: String
     let navigationController: UINavigationController
     
-    init(qrCodeData: Data, navigationController: UINavigationController) {
+    init(qrCodeData: Data, message: String, navigationController: UINavigationController) {
         self.data = qrCodeData
+        self.message = message
         self.navigationController = navigationController
     }
     
     func start() {
-        let model = QRCodeViewerModel(qrCodeData: data)
+        let model = QRCodeViewerModel(qrCodeData: data, message: message)
         let viewModel = QRCodeViewerViewModel(model: model)
         let viewController = QRCodeViewerVC(viewModel: viewModel)
         

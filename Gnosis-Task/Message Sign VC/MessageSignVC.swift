@@ -33,7 +33,7 @@ class MessageSignVC: UIViewController, Storyboarded {
     @IBAction func signButtonPressed(_ sender: Any) {
         do {
             let signedMessage = try viewModel.signedMessage()
-            coordinator?.showQRCode(data: signedMessage)
+            coordinator?.showQRCode(data: signedMessage, message: viewModel.message)
         } catch {
             if let error = error as? Web3Error {
                 switch error {

@@ -9,9 +9,11 @@
 import Foundation
 
 class QRCodeViewerModel {
-    var data: Data
+    let data: Data
+    let message: String
     
-    init(qrCodeData: Data) {
+    init(qrCodeData: Data, message: String) {
         self.data = qrCodeData
+        self.message = message
     }
 }

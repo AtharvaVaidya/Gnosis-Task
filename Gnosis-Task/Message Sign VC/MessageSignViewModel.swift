@@ -26,6 +26,8 @@ class MessageSignViewModel {
         self.model = model
     }
     
+    var message: String { model.message }
+    
     func signedMessage() throws -> Data {        
         guard let provider = InfuraProvider(.Rinkeby) else {
             throw MessageSignError.noInternet
@@ -40,7 +42,9 @@ class MessageSignViewModel {
 
         let web3Obj = web3(provider: provider)
         web3Obj.addKeystoreManager(keystoreManager)
+        
         let wallet = web3.Web3Wallet(provider: provider, web3: web3Obj)
+        
         let signedMessage = try wallet.signPersonalMessage(model.message.data(using: .utf8)!, account: model.address.ethereumAddress)
         
         return signedMessage
