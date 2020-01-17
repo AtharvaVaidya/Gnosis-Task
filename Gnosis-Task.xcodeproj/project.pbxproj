@@ -23,6 +23,7 @@
 		EC6CAC3523D20CA0001D4616 /* MessageSignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6CAC3423D20CA0001D4616 /* MessageSignVC.swift */; };
 		EC7FB30A23D2461200973854 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FB30923D2461200973854 /* VerificationViewModel.swift */; };
 		EC7FB30C23D2487700973854 /* VerificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FB30B23D2487700973854 /* VerificationModel.swift */; };
+		EC7FB30F23D24CBD00973854 /* VerificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FB30E23D24CBD00973854 /* VerificationCoordinator.swift */; };
 		ECA9745723CCD9A5006A2FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */; };
 		ECA9745B23CCD9A5006A2FA8 /* SetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745A23CCD9A5006A2FA8 /* SetupVC.swift */; };
 		ECA9745E23CCD9A5006A2FA8 /* SetupVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9745C23CCD9A5006A2FA8 /* SetupVC.storyboard */; };
@@ -62,6 +63,7 @@
 		EC6CAC3423D20CA0001D4616 /* MessageSignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSignVC.swift; sourceTree = "<group>"; };
 		EC7FB30923D2461200973854 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
 		EC7FB30B23D2487700973854 /* VerificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationModel.swift; sourceTree = "<group>"; };
+		EC7FB30E23D24CBD00973854 /* VerificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCoordinator.swift; sourceTree = "<group>"; };
 		ECA9745323CCD9A5006A2FA8 /* Gnosis-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gnosis-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA9745A23CCD9A5006A2FA8 /* SetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupVC.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		EC7FB30D23D24C8500973854 /* Verification VC */ = {
 			isa = PBXGroup;
 			children = (
+				EC7FB30E23D24CBD00973854 /* VerificationCoordinator.swift */,
 				ECDD316F23D23DD600BF8FEB /* VerificationVC.swift */,
 				EC7FB30923D2461200973854 /* VerificationViewModel.swift */,
 				EC7FB30B23D2487700973854 /* VerificationModel.swift */,
@@ -356,6 +359,7 @@
 				EC57BB3C23D1F8550024BF5A /* SetupCoordinator.swift in Sources */,
 				EC57BB3E23D1F8FF0024BF5A /* AppCoordinator.swift in Sources */,
 				EC57BB2A23D09B710024BF5A /* SetupViewModel.swift in Sources */,
+				EC7FB30F23D24CBD00973854 /* VerificationCoordinator.swift in Sources */,
 				EC57BB3423D1CAF00024BF5A /* RoundedButton.swift in Sources */,
 				ECEBBA7423D212670070E836 /* MessageSignViewModel.swift in Sources */,
 				EC57BB3623D1CBFF0024BF5A /* AccountViewModel.swift in Sources */,
