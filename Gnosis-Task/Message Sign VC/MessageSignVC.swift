@@ -28,7 +28,7 @@ class MessageSignVC: UIViewController, Storyboarded {
     @IBAction func signButtonPressed(_ sender: Any) {
         do {
             let signedMessage = try viewModel.signedMessage()
-            coordinator?.
+            coordinator?.showQRCode(data: signedMessage)
         } catch {
             print("Error: \(error.localizedDescription)")
         }

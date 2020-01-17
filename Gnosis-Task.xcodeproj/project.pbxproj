@@ -26,6 +26,9 @@
 		ECA9745E23CCD9A5006A2FA8 /* SetupVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9745C23CCD9A5006A2FA8 /* SetupVC.storyboard */; };
 		ECA9746323CCD9A6006A2FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */; };
 		ECA9746623CCD9A6006A2FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9746423CCD9A6006A2FA8 /* LaunchScreen.storyboard */; };
+		ECD72E1923D2242D00952A18 /* QRCodeViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD72E1823D2242D00952A18 /* QRCodeViewerVC.swift */; };
+		ECDD316423D2252200BF8FEB /* QRCodeViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD316323D2252200BF8FEB /* QRCodeViewerViewModel.swift */; };
+		ECDD316623D2253800BF8FEB /* QRCodeViewerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */; };
 		ECEBBA6C23D20F6F0070E836 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBA6623D20F6F0070E836 /* BigInt.framework */; };
 		ECEBBA6D23D20F6F0070E836 /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBA6723D20F6F0070E836 /* secp256k1.framework */; };
 		ECEBBA6E23D20F6F0070E836 /* web3swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBA6823D20F6F0070E836 /* web3swift.framework */; };
@@ -59,6 +62,9 @@
 		ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECA9746523CCD9A6006A2FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECA9746723CCD9A6006A2FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD72E1823D2242D00952A18 /* QRCodeViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerVC.swift; sourceTree = "<group>"; };
+		ECDD316323D2252200BF8FEB /* QRCodeViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerViewModel.swift; sourceTree = "<group>"; };
+		ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerModel.swift; sourceTree = "<group>"; };
 		ECEBBA6623D20F6F0070E836 /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BigInt.framework; path = Carthage/Build/iOS/BigInt.framework; sourceTree = SOURCE_ROOT; };
 		ECEBBA6723D20F6F0070E836 /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = secp256k1.framework; path = Carthage/Build/iOS/secp256k1.framework; sourceTree = SOURCE_ROOT; };
 		ECEBBA6823D20F6F0070E836 /* web3swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = web3swift.framework; path = Carthage/Build/iOS/web3swift.framework; sourceTree = SOURCE_ROOT; };
@@ -154,6 +160,9 @@
 				EC57BB4223D200BD0024BF5A /* Account VC */,
 				EC57BB4323D200CF0024BF5A /* Setup VC */,
 				ECEBBA7923D222C90070E836 /* Message Sign VC */,
+				ECD72E1823D2242D00952A18 /* QRCodeViewerVC.swift */,
+				ECDD316323D2252200BF8FEB /* QRCodeViewerViewModel.swift */,
+				ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */,
 				ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */,
 				ECA9746423CCD9A6006A2FA8 /* LaunchScreen.storyboard */,
 				ECA9746723CCD9A6006A2FA8 /* Info.plist */,
@@ -285,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD72E1923D2242D00952A18 /* QRCodeViewerVC.swift in Sources */,
 				ECEBBA7823D21E750070E836 /* MessageSignCoordinator.swift in Sources */,
 				EC6CAC3523D20CA0001D4616 /* MessageSignVC.swift in Sources */,
 				ECA9745B23CCD9A5006A2FA8 /* SetupVC.swift in Sources */,
@@ -295,7 +305,9 @@
 				ECEBBA7423D212670070E836 /* MessageSignViewModel.swift in Sources */,
 				EC57BB3623D1CBFF0024BF5A /* AccountViewModel.swift in Sources */,
 				ECEBBA7623D2128D0070E836 /* MessageSignModel.swift in Sources */,
+				ECDD316623D2253800BF8FEB /* QRCodeViewerModel.swift in Sources */,
 				EC57BB3823D1CC2B0024BF5A /* AccountModel.swift in Sources */,
+				ECDD316423D2252200BF8FEB /* QRCodeViewerViewModel.swift in Sources */,
 				EC6CAC3323D206F4001D4616 /* AccountCoordinator.swift in Sources */,
 				EC57BB3A23D1F8070024BF5A /* Coordinator.swift in Sources */,
 				EC57BB3223D1C6F50024BF5A /* AccountVC.swift in Sources */,

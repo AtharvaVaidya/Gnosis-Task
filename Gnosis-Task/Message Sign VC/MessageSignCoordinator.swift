@@ -34,4 +34,8 @@ class MessageSignCoordinator: Coordinator {
         
         navigationController.pushViewController(messageSignVC, animated: true)
     }
+    
+    func showQRCode(data: Data) {
+        
+    }
 }
