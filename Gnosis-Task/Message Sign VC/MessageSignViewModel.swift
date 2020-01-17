@@ -20,21 +20,32 @@ enum MessageSignError: Error {
 }
 
 class MessageSignViewModel {
-    let model: MessageSignModel
+    private let model: MessageSignModel
     
     init(model: MessageSignModel) {
         self.model = model
     }
     
-    func signedMessage() throws -> Data {
+    func signedMessage() throws -> Data {        
         guard let provider = InfuraProvider(.Rinkeby) else {
             throw MessageSignError.noInternet
         }
         
-        let web3Obj = web3(provider: provider)
+        guard let keystore = try EthereumKeystoreV3(privateKey: <#T##Data#>) else {
+            return Data()
+        }
         
-        let signedMessage = try web3Obj.wallet.signPersonalMessage(model.message, account: model.address)
+        let keystoreManager = KeystoreManager([keystore])
+
+        let web3Obj = web3(provider: provider)
+        web3Obj.addKeystoreManager(keystoreManager)
+        let wallet = web3.Web3Wallet(provider: provider, web3: web3Obj)
+        let signedMessage = try wallet.signPersonalMessage(model.message.data(using: .utf8)!, account: model.address)
         
         return signedMessage
+    }
+    
+    func change(message: String) {
+        model.message = message
     }
 }
