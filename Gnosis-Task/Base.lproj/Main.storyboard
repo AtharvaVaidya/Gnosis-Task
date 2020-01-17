@@ -10,13 +10,13 @@
         <!--Setup-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gnosis_Task" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SetupVC" customModule="Gnosis_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="35E-aD-mWq">
-                                <rect key="frame" x="20" y="240" width="374" height="69.5"/>
+                                <rect key="frame" x="20" y="180" width="374" height="69.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your private key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHD-Kv-p2H">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -32,16 +32,28 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdA-08-dOK">
+                                <rect key="frame" x="176" y="274.5" width="62" height="30"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ODi-H3-WMR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="NdA-08-dOK" firstAttribute="top" secondItem="35E-aD-mWq" secondAttribute="bottom" constant="25" id="7C1-r1-eiv"/>
                             <constraint firstItem="35E-aD-mWq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D09-en-dI6"/>
+                            <constraint firstItem="NdA-08-dOK" firstAttribute="centerX" secondItem="35E-aD-mWq" secondAttribute="centerX" id="OPd-P2-WZK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="35E-aD-mWq" secondAttribute="trailing" constant="20" id="aan-2z-yh6"/>
-                            <constraint firstItem="35E-aD-mWq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="eZA-nm-N50"/>
+                            <constraint firstItem="35E-aD-mWq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="eZA-nm-N50"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Setup" id="RYi-zy-rcd"/>
+                    <connections>
+                        <outlet property="textField" destination="kKy-3r-j8G" id="HDL-nl-pGf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

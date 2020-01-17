@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fM6-MW-ovk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -10,7 +10,7 @@
         <!--Account-->
         <scene sceneID="uXl-2U-T2h">
             <objects>
-                <viewController id="fM6-MW-ovk" sceneMemberID="viewController">
+                <viewController id="fM6-MW-ovk" customClass="AccountVC" customModule="Gnosis_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eI4-sQ-co7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,14 +19,14 @@
                                 <rect key="frame" x="20" y="44" width="374" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8t-Vl-SA1">
-                                        <rect key="frame" x="311" y="0.0" width="63" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="308" y="0.0" width="66" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0xasndkjasnsnldnasn9i1312jkb" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYX-oM-oEa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0xasndkjasnsnldnasn9i1312jkb" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYX-oM-oEa">
                                         <rect key="frame" x="137.5" y="20.5" width="236.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -36,8 +36,8 @@
                                 <rect key="frame" x="20" y="105" width="374" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pE6-CH-0qO">
-                                        <rect key="frame" x="313" y="0.0" width="61" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="310.5" y="0.0" width="63.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -49,31 +49,67 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keF-Ic-iTa">
-                                <rect key="frame" x="191.5" y="742" width="31" height="30"/>
-                                <state key="normal" title="Sign"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdb-zK-CUu" customClass="RoundedButton" customModule="Changes" customModuleProvider="target">
+                                <rect key="frame" x="52" y="722" width="310.5" height="50"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.14117647059999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TdO-lK-O5X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Sign">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signMessagePressed:" destination="fM6-MW-ovk" eventType="touchUpInside" id="zeW-c9-tcj"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSZ-n2-woc">
-                                <rect key="frame" x="187" y="792" width="40" height="30"/>
-                                <state key="normal" title="Verify"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLH-S3-1QG" customClass="RoundedButton" customModule="Changes" customModuleProvider="target">
+                                <rect key="frame" x="52" y="792" width="310.5" height="50"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.14117647059999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zyl-VF-Lhl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Verify">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="verifyPressed:" destination="fM6-MW-ovk" eventType="touchUpInside" id="SBb-o0-ZzC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="HCX-fT-ReN" firstAttribute="top" secondItem="Sok-fc-Sib" secondAttribute="bottom" constant="20" id="2Sb-k9-Xse"/>
                             <constraint firstItem="508-bi-dap" firstAttribute="trailing" secondItem="HCX-fT-ReN" secondAttribute="trailing" constant="20" id="59X-y8-spF"/>
+                            <constraint firstItem="Rdb-zK-CUu" firstAttribute="centerX" secondItem="508-bi-dap" secondAttribute="centerX" id="9Mm-Kf-oUj"/>
+                            <constraint firstItem="dLH-S3-1QG" firstAttribute="top" secondItem="Rdb-zK-CUu" secondAttribute="bottom" constant="20" id="MGE-ID-0zD"/>
                             <constraint firstItem="HCX-fT-ReN" firstAttribute="leading" secondItem="508-bi-dap" secondAttribute="leading" constant="20" id="MoN-fa-uuC"/>
                             <constraint firstItem="508-bi-dap" firstAttribute="trailing" secondItem="Sok-fc-Sib" secondAttribute="trailing" constant="20" id="UjW-ik-OP4"/>
+                            <constraint firstItem="508-bi-dap" firstAttribute="bottom" secondItem="dLH-S3-1QG" secondAttribute="bottom" constant="20" id="Vxf-of-9On"/>
                             <constraint firstItem="508-bi-dap" firstAttribute="leading" secondItem="Sok-fc-Sib" secondAttribute="leading" constant="-20" id="XGK-gs-YLv"/>
-                            <constraint firstItem="keF-Ic-iTa" firstAttribute="centerX" secondItem="508-bi-dap" secondAttribute="centerX" id="XYX-kD-JLP"/>
                             <constraint firstItem="Sok-fc-Sib" firstAttribute="top" secondItem="508-bi-dap" secondAttribute="top" id="Zmd-rq-e8s"/>
-                            <constraint firstItem="hSZ-n2-woc" firstAttribute="top" secondItem="keF-Ic-iTa" secondAttribute="bottom" constant="20" id="ZnG-rv-8Gp"/>
-                            <constraint firstItem="508-bi-dap" firstAttribute="bottom" secondItem="hSZ-n2-woc" secondAttribute="bottom" constant="40" id="hm5-Dq-YpM"/>
-                            <constraint firstItem="hSZ-n2-woc" firstAttribute="centerX" secondItem="508-bi-dap" secondAttribute="centerX" id="rgK-iL-CGK"/>
+                            <constraint firstItem="dLH-S3-1QG" firstAttribute="width" secondItem="Rdb-zK-CUu" secondAttribute="width" id="gHV-EU-ZKH"/>
+                            <constraint firstItem="Rdb-zK-CUu" firstAttribute="width" secondItem="eI4-sQ-co7" secondAttribute="width" multiplier="0.75" id="hMA-bG-6gr"/>
+                            <constraint firstItem="dLH-S3-1QG" firstAttribute="centerX" secondItem="Rdb-zK-CUu" secondAttribute="centerX" id="ziL-xV-0m4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="508-bi-dap"/>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="DMb-ZW-7M0"/>
+                    <connections>
+                        <outlet property="ethBalanceLabel" destination="nKE-n6-MIT" id="17k-vI-FYw"/>
+                        <outlet property="publicAddressLabel" destination="eYX-oM-oEa" id="Lwk-6j-9aQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aat-r7-XNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

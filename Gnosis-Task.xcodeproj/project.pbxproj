@@ -3,28 +3,44 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		EC0730C223CF32A500A81D91 /* AccountVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0730C123CF32A500A81D91 /* AccountVC.storyboard */; };
 		EC0730C423CF32C600A81D91 /* MessageSignVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0730C323CF32C600A81D91 /* MessageSignVC.storyboard */; };
+		EC57BB2A23D09B710024BF5A /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57BB2923D09B710024BF5A /* SetupViewModel.swift */; };
+		EC57BB2C23D09B810024BF5A /* SetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57BB2B23D09B810024BF5A /* SetupModel.swift */; };
+		EC57BB3223D1C6F50024BF5A /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57BB3123D1C6F50024BF5A /* AccountVC.swift */; };
+		EC57BB3423D1CAF00024BF5A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57BB3323D1CAF00024BF5A /* RoundedButton.swift */; };
+		EC57BB3623D1CBFF0024BF5A /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57BB3523D1CBFF0024BF5A /* AccountViewModel.swift */; };
+		EC57BB3823D1CC2B0024BF5A /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57BB3723D1CC2B0024BF5A /* AccountModel.swift */; };
 		ECA9745723CCD9A5006A2FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */; };
 		ECA9745923CCD9A5006A2FA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745823CCD9A5006A2FA8 /* SceneDelegate.swift */; };
-		ECA9745B23CCD9A5006A2FA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745A23CCD9A5006A2FA8 /* ViewController.swift */; };
+		ECA9745B23CCD9A5006A2FA8 /* SetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745A23CCD9A5006A2FA8 /* SetupVC.swift */; };
 		ECA9745E23CCD9A5006A2FA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9745C23CCD9A5006A2FA8 /* Main.storyboard */; };
 		ECA9746123CCD9A5006A2FA8 /* Gnosis_Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECA9745F23CCD9A5006A2FA8 /* Gnosis_Task.xcdatamodeld */; };
 		ECA9746323CCD9A6006A2FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */; };
 		ECA9746623CCD9A6006A2FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9746423CCD9A6006A2FA8 /* LaunchScreen.storyboard */; };
+		FEC9E7DDC5FFA52C0F709927 /* Pods_Gnosis_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC88ACACABF98ED6926C8CA7 /* Pods_Gnosis_Task.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		277F36EC03F391C85C828263 /* Pods-Gnosis-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gnosis-Task.debug.xcconfig"; path = "Target Support Files/Pods-Gnosis-Task/Pods-Gnosis-Task.debug.xcconfig"; sourceTree = "<group>"; };
+		4DC156D4945FCE0605B32C40 /* Pods-Gnosis-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gnosis-Task.release.xcconfig"; path = "Target Support Files/Pods-Gnosis-Task/Pods-Gnosis-Task.release.xcconfig"; sourceTree = "<group>"; };
+		DC88ACACABF98ED6926C8CA7 /* Pods_Gnosis_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gnosis_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0730C123CF32A500A81D91 /* AccountVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountVC.storyboard; sourceTree = "<group>"; };
 		EC0730C323CF32C600A81D91 /* MessageSignVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MessageSignVC.storyboard; sourceTree = "<group>"; };
+		EC57BB2923D09B710024BF5A /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
+		EC57BB2B23D09B810024BF5A /* SetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupModel.swift; sourceTree = "<group>"; };
+		EC57BB3123D1C6F50024BF5A /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		EC57BB3323D1CAF00024BF5A /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		EC57BB3523D1CBFF0024BF5A /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		EC57BB3723D1CC2B0024BF5A /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		ECA9745323CCD9A5006A2FA8 /* Gnosis-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gnosis-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA9745823CCD9A5006A2FA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECA9745A23CCD9A5006A2FA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECA9745A23CCD9A5006A2FA8 /* SetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupVC.swift; sourceTree = "<group>"; };
 		ECA9745D23CCD9A5006A2FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECA9746023CCD9A5006A2FA8 /* Gnosis_Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gnosis_Task.xcdatamodel; sourceTree = "<group>"; };
 		ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC9E7DDC5FFA52C0F709927 /* Pods_Gnosis_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		780A0B623377B3646AF9A73B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC88ACACABF98ED6926C8CA7 /* Pods_Gnosis_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82B2198772A5EEFF4663C7B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				277F36EC03F391C85C828263 /* Pods-Gnosis-Task.debug.xcconfig */,
+				4DC156D4945FCE0605B32C40 /* Pods-Gnosis-Task.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ECA9744A23CCD9A5006A2FA8 = {
 			isa = PBXGroup;
 			children = (
 				ECA9745523CCD9A5006A2FA8 /* Gnosis-Task */,
 				ECA9745423CCD9A5006A2FA8 /* Products */,
+				82B2198772A5EEFF4663C7B8 /* Pods */,
+				780A0B623377B3646AF9A73B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,7 +100,13 @@
 			children = (
 				ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */,
 				ECA9745823CCD9A5006A2FA8 /* SceneDelegate.swift */,
-				ECA9745A23CCD9A5006A2FA8 /* ViewController.swift */,
+				EC57BB3323D1CAF00024BF5A /* RoundedButton.swift */,
+				EC57BB3123D1C6F50024BF5A /* AccountVC.swift */,
+				EC57BB3523D1CBFF0024BF5A /* AccountViewModel.swift */,
+				EC57BB3723D1CC2B0024BF5A /* AccountModel.swift */,
+				ECA9745A23CCD9A5006A2FA8 /* SetupVC.swift */,
+				EC57BB2923D09B710024BF5A /* SetupViewModel.swift */,
+				EC57BB2B23D09B810024BF5A /* SetupModel.swift */,
 				ECA9745C23CCD9A5006A2FA8 /* Main.storyboard */,
 				EC0730C123CF32A500A81D91 /* AccountVC.storyboard */,
 				EC0730C323CF32C600A81D91 /* MessageSignVC.storyboard */,
@@ -83,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECA9746A23CCD9A6006A2FA8 /* Build configuration list for PBXNativeTarget "Gnosis-Task" */;
 			buildPhases = (
+				8AE8901635CA5290E1DB88ED /* [CP] Check Pods Manifest.lock */,
 				ECA9744F23CCD9A5006A2FA8 /* Sources */,
 				ECA9745023CCD9A5006A2FA8 /* Frameworks */,
 				ECA9745123CCD9A5006A2FA8 /* Resources */,
+				98A272F14C2E75F1922C99EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,15 +188,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8AE8901635CA5290E1DB88ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gnosis-Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A272F14C2E75F1922C99EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gnosis-Task/Pods-Gnosis-Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gnosis-Task/Pods-Gnosis-Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gnosis-Task/Pods-Gnosis-Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ECA9744F23CCD9A5006A2FA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECA9745B23CCD9A5006A2FA8 /* ViewController.swift in Sources */,
+				ECA9745B23CCD9A5006A2FA8 /* SetupVC.swift in Sources */,
+				EC57BB2A23D09B710024BF5A /* SetupViewModel.swift in Sources */,
 				ECA9746123CCD9A5006A2FA8 /* Gnosis_Task.xcdatamodeld in Sources */,
+				EC57BB3423D1CAF00024BF5A /* RoundedButton.swift in Sources */,
+				EC57BB3623D1CBFF0024BF5A /* AccountViewModel.swift in Sources */,
+				EC57BB3823D1CC2B0024BF5A /* AccountModel.swift in Sources */,
+				EC57BB3223D1C6F50024BF5A /* AccountVC.swift in Sources */,
 				ECA9745723CCD9A5006A2FA8 /* AppDelegate.swift in Sources */,
 				ECA9745923CCD9A5006A2FA8 /* SceneDelegate.swift in Sources */,
+				EC57BB2C23D09B810024BF5A /* SetupModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +386,7 @@
 		};
 		ECA9746B23CCD9A6006A2FA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 277F36EC03F391C85C828263 /* Pods-Gnosis-Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +405,7 @@
 		};
 		ECA9746C23CCD9A6006A2FA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DC156D4945FCE0605B32C40 /* Pods-Gnosis-Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_Gnosis_Task {
+  umbrella header "Pods-Gnosis-Task-umbrella.h"
+
+  export *
+  module * { export * }
+}
