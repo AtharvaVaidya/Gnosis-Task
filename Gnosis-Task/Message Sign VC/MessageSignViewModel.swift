@@ -31,7 +31,8 @@ class MessageSignViewModel {
             throw MessageSignError.noInternet
         }
         
-        guard let keystore = try EthereumKeystoreV3(privateKey: <#T##Data#>) else {
+        guard let data = Data.fromHex(model.address.privateKey),
+            let keystore = try EthereumKeystoreV3(privateKey: data) else {
             return Data()
         }
         
@@ -40,7 +41,7 @@ class MessageSignViewModel {
         let web3Obj = web3(provider: provider)
         web3Obj.addKeystoreManager(keystoreManager)
         let wallet = web3.Web3Wallet(provider: provider, web3: web3Obj)
-        let signedMessage = try wallet.signPersonalMessage(model.message.data(using: .utf8)!, account: model.address)
+        let signedMessage = try wallet.signPersonalMessage(model.message.data(using: .utf8)!, account: model.address.ethereumAddress)
         
         return signedMessage
     }

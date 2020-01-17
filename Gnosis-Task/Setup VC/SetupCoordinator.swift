@@ -22,7 +22,7 @@ class SetupCoordinator: Coordinator {
         navigationController.pushViewController(setupVC, animated: true)
     }
     
-    func goToAccountVC(address: EthereumAddress) {
+    func goToAccountVC(address: EthAddressInfo) {
         let accountCoordinator = AccountCoordinator(address: address, navigationController: navigationController)
         accountCoordinator.start()
     }

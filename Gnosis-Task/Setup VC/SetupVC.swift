@@ -23,6 +23,10 @@ final class SetupVC: UIViewController, Storyboarded {
         textField?.delegate = self
     }
     
+    @IBAction func privateKeyChanged(_ sender: Any) {
+        viewModel.changedPrivateKey(text: textField?.text ?? "")
+    }
+    
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         do {
             let address = try viewModel.generateAddress()

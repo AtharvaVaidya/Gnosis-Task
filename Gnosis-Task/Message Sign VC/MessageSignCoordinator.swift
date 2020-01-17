@@ -10,10 +10,10 @@ import UIKit
 import web3swift
 
 class MessageSignCoordinator: Coordinator {
-    let address: EthereumAddress
+    let address: EthAddressInfo
     let navigationController: UINavigationController
     
-    init(address: EthereumAddress, navigationController: UINavigationController) {
+    init(address: EthAddressInfo, navigationController: UINavigationController) {
         self.address = address
         self.navigationController = navigationController
     }

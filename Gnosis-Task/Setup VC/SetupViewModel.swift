@@ -39,7 +39,7 @@ class SetupViewModel {
         model.privateKeyText = text
     }
     
-    func generateAddress() throws -> EthereumAddress {
+    func generateAddress() throws -> EthAddressInfo {
         let privateKey = self.model.privateKeyText
         
         let password = "web3swift"
@@ -61,6 +61,6 @@ class SetupViewModel {
             throw PrivateKeyValidationError.noValidAddressGenerated
         }
         
-        return ethAddress
+        return EthAddressInfo(privateKey: model.privateKeyText, ethereumAddress: ethAddress)
     }
 }

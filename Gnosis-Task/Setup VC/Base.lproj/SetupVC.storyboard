@@ -29,6 +29,9 @@
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="privateKeyChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="aps-Mg-Z4Q"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>

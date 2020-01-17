@@ -11,9 +11,9 @@ import web3swift
 
 class MessageSignModel {
     @Published var message: String = ""
-    let address: EthereumAddress
+    let address: EthAddressInfo
     
-    init(address: EthereumAddress) {
+    init(address: EthAddressInfo) {
         self.address = address
     }
 }

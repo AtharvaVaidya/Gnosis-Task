@@ -10,11 +10,11 @@ import UIKit
 import web3swift
 
 class AccountCoordinator: Coordinator {
-    let address: EthereumAddress
+    let address: EthAddressInfo
     
     var navigationController: UINavigationController
     
-    init(address: EthereumAddress, navigationController: UINavigationController) {
+    init(address: EthAddressInfo, navigationController: UINavigationController) {
         self.address = address
         self.navigationController = navigationController
     }

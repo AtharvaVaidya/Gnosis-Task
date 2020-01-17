@@ -20,7 +20,7 @@ class AccountViewModel {
     let model: AccountModel
     
     var address: String {
-        return model.address.address
+        return model.address.ethereumAddress.address
     }
     
     var currentBalance: String {
@@ -63,7 +63,7 @@ class AccountViewModel {
         .store(in: &cancellables)
     }
     
-    func generateAccountBalance(address: EthereumAddress) -> Future<String, Error> {
+    func generateAccountBalance(address: EthAddressInfo) -> Future<String, Error> {
         return Future<String, Error> { (promise) in
             DispatchQueue.global(qos: .default).async {
                 guard let provider = InfuraProvider(.Rinkeby) else {
@@ -76,7 +76,7 @@ class AccountViewModel {
                 let eth = web3.Eth(provider: provider, web3: web3Object)
                 
                 do {
-                    let balanceResult = try eth.getBalance(address: address)
+                    let balanceResult = try eth.getBalance(address: address.ethereumAddress)
                     guard let balanceString = Web3.Utils.formatToEthereumUnits(balanceResult, toUnits: .eth, decimals: 3) else {
                         promise(.failure(BalanceFetchError.formattingError(balanceResult)))
                         return

@@ -10,11 +10,11 @@ import Foundation
 import web3swift
 
 class AccountModel {
-    let address: EthereumAddress
+    let address: EthAddressInfo
     
     @Published var balance: String = ""
     
-    init(address: EthereumAddress) {
+    init(address: EthAddressInfo) {
         self.address = address
     }
 }
