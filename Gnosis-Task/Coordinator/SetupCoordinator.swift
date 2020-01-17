@@ -8,6 +8,7 @@
 
 import UIKit
 import Combine
+import web3swift
 
 class SetupCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
@@ -26,7 +27,12 @@ class SetupCoordinator: Coordinator {
     
     func start() {
         let setupVC = SetupVC.instantiate()
-        
+        setupVC.coordinator = self
         navigationController.pushViewController(setupVC, animated: true)
+    }
+    
+    func goToAccountVC(address: EthereumAddress) {
+        let accountCoordinator = AccountCoordinator(address: address, navigationController: navigationController)
+        accountCoordinator.start()
     }
 }

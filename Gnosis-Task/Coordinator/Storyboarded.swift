@@ -9,6 +9,10 @@
 import UIKit
 
 protocol Storyboarded {
+    associatedtype Coordinator
+    
+    var coordinator: Coordinator? { get set }
+    
     static func instantiate() -> Self
 }
 

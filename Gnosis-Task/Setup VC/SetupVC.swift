@@ -11,8 +11,13 @@ import web3swift
 import Combine
 
 final class SetupVC: UIViewController, Storyboarded {
+    typealias Coordinator = SetupCoordinator
+    
     @IBOutlet weak var textField: UITextField?
+    
     private let viewModel = SetupViewModel()
+    
+    var coordinator: Coordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,24 +28,10 @@ final class SetupVC: UIViewController, Storyboarded {
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         do {
             let address = try viewModel.generateAddress()
-            goToAccountVC(address: address)
+            coordinator?.goToAccountVC(address: address)
         } catch {
             showError(title: "Error", message: error.localizedDescription)
         }
-    }
-    
-    func goToAccountVC(address: EthereumAddress) {
-        let model = AccountModel(address: address)
-        let viewModel = AccountViewModel(model: model)
-        
-        let storyboard = UIStoryboard(name: "AccountVC", bundle: .main)
-        guard let accountVC = storyboard.instantiateInitialViewController(creator: { (coder) -> AccountVC? in
-            return AccountVC(coder: coder, viewModel: viewModel)
-        }) else {
-            return
-        }
-        
-        navigationController?.pushViewController(accountVC, animated: true)
     }
     
     func showError(title: String, message: String) {

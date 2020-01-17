@@ -31,7 +31,7 @@ class AppCoordinator: Coordinator {
     func start() {
         let navigationController = UINavigationController()
         let myCoordinator = SetupCoordinator(navigationController: navigationController)
-
+        
         self.store(coordinator: myCoordinator)
         myCoordinator.start()
 
