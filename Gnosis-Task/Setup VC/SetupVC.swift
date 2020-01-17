@@ -10,14 +10,12 @@ import UIKit
 import web3swift
 import Combine
 
-final class SetupVC: UIViewController, Storyboarded {
-    typealias Coordinator = SetupCoordinator
-    
+final class SetupVC: UIViewController, Storyboarded {    
     @IBOutlet weak var textField: UITextField?
     
     private let viewModel = SetupViewModel()
     
-    var coordinator: Coordinator?
+    var coordinator: SetupCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()

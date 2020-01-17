@@ -32,6 +32,9 @@
 		ECEBBA6F23D20F6F0070E836 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBA6923D20F6F0070E836 /* Starscream.framework */; };
 		ECEBBA7023D20F6F0070E836 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBA6A23D20F6F0070E836 /* CryptoSwift.framework */; };
 		ECEBBA7123D20F6F0070E836 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEBBA6B23D20F6F0070E836 /* PromiseKit.framework */; };
+		ECEBBA7423D212670070E836 /* MessageSignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBA7323D212670070E836 /* MessageSignViewModel.swift */; };
+		ECEBBA7623D2128D0070E836 /* MessageSignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBA7523D2128D0070E836 /* MessageSignModel.swift */; };
+		ECEBBA7823D21E750070E836 /* MessageSignCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBA7723D21E750070E836 /* MessageSignCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		ECEBBA6923D20F6F0070E836 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = SOURCE_ROOT; };
 		ECEBBA6A23D20F6F0070E836 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = SOURCE_ROOT; };
 		ECEBBA6B23D20F6F0070E836 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = SOURCE_ROOT; };
+		ECEBBA7323D212670070E836 /* MessageSignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSignViewModel.swift; sourceTree = "<group>"; };
+		ECEBBA7523D2128D0070E836 /* MessageSignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSignModel.swift; sourceTree = "<group>"; };
+		ECEBBA7723D21E750070E836 /* MessageSignCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSignCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +151,7 @@
 				EC57BB4123D200B40024BF5A /* Coordinator */,
 				EC57BB4223D200BD0024BF5A /* Account VC */,
 				EC57BB4323D200CF0024BF5A /* Setup VC */,
-				EC6CAC3423D20CA0001D4616 /* MessageSignVC.swift */,
+				ECEBBA7923D222C90070E836 /* Message Sign VC */,
 				ECA9745C23CCD9A5006A2FA8 /* SetupVC.storyboard */,
 				EC0730C123CF32A500A81D91 /* AccountVC.storyboard */,
 				EC0730C323CF32C600A81D91 /* MessageSignVC.storyboard */,
@@ -160,6 +166,17 @@
 				ECEBBA6823D20F6F0070E836 /* web3swift.framework */,
 			);
 			path = "Gnosis-Task";
+			sourceTree = "<group>";
+		};
+		ECEBBA7923D222C90070E836 /* Message Sign VC */ = {
+			isa = PBXGroup;
+			children = (
+				ECEBBA7723D21E750070E836 /* MessageSignCoordinator.swift */,
+				EC6CAC3423D20CA0001D4616 /* MessageSignVC.swift */,
+				ECEBBA7323D212670070E836 /* MessageSignViewModel.swift */,
+				ECEBBA7523D2128D0070E836 /* MessageSignModel.swift */,
+			);
+			path = "Message Sign VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,13 +285,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEBBA7823D21E750070E836 /* MessageSignCoordinator.swift in Sources */,
 				EC6CAC3523D20CA0001D4616 /* MessageSignVC.swift in Sources */,
 				ECA9745B23CCD9A5006A2FA8 /* SetupVC.swift in Sources */,
 				EC57BB3C23D1F8550024BF5A /* SetupCoordinator.swift in Sources */,
 				EC57BB3E23D1F8FF0024BF5A /* AppCoordinator.swift in Sources */,
 				EC57BB2A23D09B710024BF5A /* SetupViewModel.swift in Sources */,
 				EC57BB3423D1CAF00024BF5A /* RoundedButton.swift in Sources */,
+				ECEBBA7423D212670070E836 /* MessageSignViewModel.swift in Sources */,
 				EC57BB3623D1CBFF0024BF5A /* AccountViewModel.swift in Sources */,
+				ECEBBA7623D2128D0070E836 /* MessageSignModel.swift in Sources */,
 				EC57BB3823D1CC2B0024BF5A /* AccountModel.swift in Sources */,
 				EC6CAC3323D206F4001D4616 /* AccountCoordinator.swift in Sources */,
 				EC57BB3A23D1F8070024BF5A /* Coordinator.swift in Sources */,

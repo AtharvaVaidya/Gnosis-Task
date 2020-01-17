@@ -8,11 +8,13 @@
 
 import UIKit
 
-class AccountVC: UIViewController {
+class AccountVC: UIViewController, Storyboarded {    
     @IBOutlet weak var publicAddressLabel: UILabel!
     @IBOutlet weak var ethBalanceLabel: UILabel!
     
     let viewModel: AccountViewModel
+    
+    var coordinator: AccountCoordinator?
     
     init?(coder: NSCoder, viewModel: AccountViewModel) {
         self.viewModel = viewModel
@@ -34,7 +36,7 @@ class AccountVC: UIViewController {
     }
     
     @IBAction func signMessagePressed(_ sender: Any) {
-        
+        coordinator?.signMessage()
     }
     
     @IBAction func verifyPressed(_ sender: Any) {

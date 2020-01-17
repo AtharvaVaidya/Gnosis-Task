@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Message SignVC-->
+        <!--Sign-->
         <scene sceneID="ZKP-pR-sud">
             <objects>
-                <viewController id="Vks-1T-yEo" customClass="MessageSignVC" customModule="Gnosis_Task" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign" id="Vks-1T-yEo" customClass="MessageSignVC" customModule="Gnosis_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pqo-Q2-aYG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

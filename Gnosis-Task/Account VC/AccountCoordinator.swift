@@ -24,12 +24,20 @@ class AccountCoordinator: Coordinator {
         let viewModel = AccountViewModel(model: model)
         
         let storyboard = UIStoryboard(name: "AccountVC", bundle: .main)
+        
         guard let accountVC = storyboard.instantiateInitialViewController(creator: { (coder) -> AccountVC? in
             return AccountVC(coder: coder, viewModel: viewModel)
         }) else {
             return
         }
         
+        accountVC.coordinator = self
+        
         navigationController.pushViewController(accountVC, animated: true)
+    }
+    
+    func signMessage() {
+        let messageSignCoordinator = MessageSignCoordinator(address: address, navigationController: navigationController)
+        messageSignCoordinator.start()
     }
 }
