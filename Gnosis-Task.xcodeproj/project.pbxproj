@@ -91,8 +91,6 @@
 				EC57BB3F23D1FBF30024BF5A /* Storyboarded.swift */,
 				EC57BB3923D1F8070024BF5A /* Coordinator.swift */,
 				EC57BB3D23D1F8FF0024BF5A /* AppCoordinator.swift */,
-				EC57BB3B23D1F8550024BF5A /* SetupCoordinator.swift */,
-				EC6CAC3223D206F4001D4616 /* AccountCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -100,6 +98,7 @@
 		EC57BB4223D200BD0024BF5A /* Account VC */ = {
 			isa = PBXGroup;
 			children = (
+				EC6CAC3223D206F4001D4616 /* AccountCoordinator.swift */,
 				EC57BB3123D1C6F50024BF5A /* AccountVC.swift */,
 				EC57BB3523D1CBFF0024BF5A /* AccountViewModel.swift */,
 				EC57BB3723D1CC2B0024BF5A /* AccountModel.swift */,
@@ -110,6 +109,7 @@
 		EC57BB4323D200CF0024BF5A /* Setup VC */ = {
 			isa = PBXGroup;
 			children = (
+				EC57BB3B23D1F8550024BF5A /* SetupCoordinator.swift */,
 				ECA9745A23CCD9A5006A2FA8 /* SetupVC.swift */,
 				EC57BB2923D09B710024BF5A /* SetupViewModel.swift */,
 				EC57BB2B23D09B810024BF5A /* SetupModel.swift */,
