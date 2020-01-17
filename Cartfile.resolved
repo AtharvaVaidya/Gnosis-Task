@@ -1,0 +1,5 @@
+github "attaswift/BigInt" "v4.0.0"
+github "daltoniam/Starscream" "3.1.1"
+github "krzyzanowskim/CryptoSwift" "1.3.0"
+github "matter-labs/web3swift" "05b57670bf65192d5c4334b4dd6909e22b750f51"
+github "mxcl/PromiseKit" "6.13.1"

@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Message SignVC-->
         <scene sceneID="ZKP-pR-sud">
             <objects>
-                <viewController id="Vks-1T-yEo" sceneMemberID="viewController">
+                <viewController id="Vks-1T-yEo" customClass="MessageSignVC" customModule="Gnosis_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pqo-Q2-aYG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,6 +47,9 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signButtonPressed:" destination="Vks-1T-yEo" eventType="touchUpInside" id="HuL-Pi-PXn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -60,6 +63,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vcq-wi-gyh"/>
                     </view>
+                    <connections>
+                        <outlet property="textfield" destination="NF9-Kr-8Q3" id="Ilg-ae-3L2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SV-rz-meO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
