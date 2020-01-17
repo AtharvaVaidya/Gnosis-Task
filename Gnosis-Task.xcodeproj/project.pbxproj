@@ -144,6 +144,16 @@
 			path = "Setup VC";
 			sourceTree = "<group>";
 		};
+		EC7FB30D23D24C8500973854 /* Verification VC */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD316F23D23DD600BF8FEB /* VerificationVC.swift */,
+				EC7FB30923D2461200973854 /* VerificationViewModel.swift */,
+				EC7FB30B23D2487700973854 /* VerificationModel.swift */,
+			);
+			path = "Verification VC";
+			sourceTree = "<group>";
+		};
 		ECA9744A23CCD9A5006A2FA8 = {
 			isa = PBXGroup;
 			children = (
@@ -167,9 +177,6 @@
 				ECA9745623CCD9A5006A2FA8 /* AppDelegate.swift */,
 				ECDD316D23D23DB800BF8FEB /* Model */,
 				ECDD316C23D23DB200BF8FEB /* UI */,
-				ECDD316F23D23DD600BF8FEB /* VerificationVC.swift */,
-				EC7FB30923D2461200973854 /* VerificationViewModel.swift */,
-				EC7FB30B23D2487700973854 /* VerificationModel.swift */,
 				ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */,
 				ECA9746423CCD9A6006A2FA8 /* LaunchScreen.storyboard */,
 				ECA9746723CCD9A6006A2FA8 /* Info.plist */,
@@ -203,6 +210,7 @@
 				EC57BB4323D200CF0024BF5A /* Setup VC */,
 				ECEBBA7923D222C90070E836 /* Message Sign VC */,
 				ECDD316B23D23DA400BF8FEB /* QR Code Viewer */,
+				EC7FB30D23D24C8500973854 /* Verification VC */,
 			);
 			path = UI;
 			sourceTree = "<group>";
