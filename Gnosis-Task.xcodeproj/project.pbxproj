@@ -71,6 +71,7 @@
 		ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECA9746523CCD9A6006A2FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECA9746723CCD9A6006A2FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBD3FEF23D32B80004B2CCB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ECD72E1823D2242D00952A18 /* QRCodeViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerVC.swift; sourceTree = "<group>"; };
 		ECDD316323D2252200BF8FEB /* QRCodeViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerViewModel.swift; sourceTree = "<group>"; };
 		ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerModel.swift; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 		ECA9744A23CCD9A5006A2FA8 = {
 			isa = PBXGroup;
 			children = (
+				ECBD3FEF23D32B80004B2CCB /* README.md */,
 				ECA9745523CCD9A5006A2FA8 /* Gnosis-Task */,
 				ECA9745423CCD9A5006A2FA8 /* Products */,
 				82B2198772A5EEFF4663C7B8 /* Pods */,
