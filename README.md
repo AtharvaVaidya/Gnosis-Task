@@ -9,7 +9,9 @@
 
 1. Install Carthage if it isn't installed already. Follow these steps [here](https://github.com/Carthage/Carthage#installing-carthage).
 2. Go to terminal in the top level folder, and run `carthage update --platform iOS`.
-3. Open `Gnosis-Task.xcodeproj`, and then run the app (Command - R).
+3. Open `Gnosis-Task.xcodeproj`.
+4. Clean the project by pressing `Command-Shift-K`
+5. Run the app by pressing `Command - R`
 
 ## Notes 
 
