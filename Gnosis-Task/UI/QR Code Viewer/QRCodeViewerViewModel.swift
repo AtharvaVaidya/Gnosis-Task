@@ -18,7 +18,8 @@ class QRCodeViewerViewModel {
     
     var message: String { model.message }
     
-    func makeQRCodeImage(size: CGSize) -> Future<UIImage, QRCodeGenerationError> {        
-        return QRCodeGenerator.generateImage(with: model.data, size: size)
+    func makeQRCodeImage(size: CGSize) -> Future<UIImage, QRCodeGenerationError> {
+        let backgroundQueue = DispatchQueue.global(qos: .userInteractive)
+        return QRCodeGenerator.generateImage(with: model.data, size: size, context: backgroundQueue)
     }
 }

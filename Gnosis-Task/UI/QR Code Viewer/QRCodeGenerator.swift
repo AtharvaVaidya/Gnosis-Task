@@ -10,11 +10,9 @@ import UIKit
 import Combine
 
 class QRCodeGenerator {
-    static func generateImage(with data: Data, size: CGSize) -> Future<UIImage, QRCodeGenerationError> {
+    static func generateImage(with data: Data, size: CGSize, context: DispatchQueue) -> Future<UIImage, QRCodeGenerationError> {
         return Future<UIImage, QRCodeGenerationError> { promise in
-            let backgroundQueue = DispatchQueue.global(qos: .userInteractive)
-            
-            backgroundQueue.async {
+            context.async {
                 let filter = CIFilter.qrCodeGenerator
                 
                 filter.setValue(data, forKey: CIFilterAtrributes.inputMessage.rawValue)
