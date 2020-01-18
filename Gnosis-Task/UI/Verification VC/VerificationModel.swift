@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import Combine
 
 class VerificationModel {
     @Published var qrCodeData: Data?
     
-    private let address: EthAddressInfo
+    let address: EthAddressInfo
     
-    @Published var decodeMessage: String?
+    @Published var signatureIsValid: Bool = false
     
     init(address: EthAddressInfo) {
         self.address = address

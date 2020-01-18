@@ -58,8 +58,8 @@ class MessageSignViewModel {
         let signedMessageHex = signedMessageData.toHexString()
         
         print("signed message hex string: \(signedMessageHex)")
-        
-        let signedStringData = Data(signedMessageHex.utf8)
+        let signedQRCode = "\(signedMessageHex)/\(model.message)"
+        let signedStringData = Data(signedQRCode.utf8)
         
         return signedStringData
     }

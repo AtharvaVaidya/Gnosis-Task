@@ -40,6 +40,8 @@ class VerificationVC: UIViewController {
         setupViews()
         
         startCameraSession()
+        
+        observeModel()
     }
     
     private func setupViews() {
@@ -101,8 +103,12 @@ class VerificationVC: UIViewController {
     func observeModel() {
         viewModel.foundSignedMessage
         .receive(on: RunLoop.main)
-        .sink { signedMessage in
-            self.showAlert(title: "Signature is valid", message: signedMessage)
+        .sink { isValidSignature in
+            if isValidSignature {
+                self.showAlert(title: "Signature is valid", message: "")
+            } else {
+                self.showAlert(title: "Invalid Signature", message: "")
+            }
         }
         .store(in: &cancellables)
     }
