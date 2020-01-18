@@ -11,9 +11,7 @@ import web3swift
 
 class MessageSignVC: UIViewController, Storyboarded {
     let viewModel: MessageSignViewModel
-    
-    @IBOutlet weak var textfield: UITextField!
-    
+        
     var coordinator: MessageSignCoordinator?
     
     init?(coder: NSCoder, viewModel: MessageSignViewModel) {

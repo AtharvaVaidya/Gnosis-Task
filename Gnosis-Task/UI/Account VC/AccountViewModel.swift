@@ -65,7 +65,8 @@ class AccountViewModel {
     
     func generateAccountBalance(address: EthAddressInfo) -> Future<String, Error> {
         return Future<String, Error> { (promise) in
-            DispatchQueue.global(qos: .default).async {
+            let backgroundQueue = DispatchQueue.global(qos: .default)
+            backgroundQueue.async {
                 guard let provider = InfuraProvider(.Rinkeby) else {
                     promise(.failure(BalanceFetchError.noInternet))
                     return
@@ -77,7 +78,7 @@ class AccountViewModel {
                 
                 do {
                     let balanceResult = try eth.getBalance(address: address.ethereumAddress)
-                    guard let balanceString = Web3.Utils.formatToEthereumUnits(balanceResult, toUnits: .eth, decimals: 3) else {
+                    guard let balanceString = Web3.Utils.formatToEthereumUnits(balanceResult, toUnits: .eth, decimals: 8) else {
                         promise(.failure(BalanceFetchError.formattingError(balanceResult)))
                         return
                     }

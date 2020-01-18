@@ -66,9 +66,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vcq-wi-gyh"/>
                     </view>
-                    <connections>
-                        <outlet property="textfield" destination="NF9-Kr-8Q3" id="Ilg-ae-3L2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SV-rz-meO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

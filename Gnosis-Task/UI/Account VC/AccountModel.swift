@@ -12,7 +12,7 @@ import web3swift
 class AccountModel {
     let address: EthAddressInfo
     
-    @Published var balance: String = ""
+    @Published var balance: String = "-"
     
     init(address: EthAddressInfo) {
         self.address = address
