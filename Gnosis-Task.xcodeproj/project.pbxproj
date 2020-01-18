@@ -29,6 +29,7 @@
 		ECA9745E23CCD9A5006A2FA8 /* SetupVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9745C23CCD9A5006A2FA8 /* SetupVC.storyboard */; };
 		ECA9746323CCD9A6006A2FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA9746223CCD9A6006A2FA8 /* Assets.xcassets */; };
 		ECA9746623CCD9A6006A2FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9746423CCD9A6006A2FA8 /* LaunchScreen.storyboard */; };
+		ECBD3FF123D33028004B2CCB /* QRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD3FF023D33028004B2CCB /* QRCodeGenerator.swift */; };
 		ECD72E1923D2242D00952A18 /* QRCodeViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD72E1823D2242D00952A18 /* QRCodeViewerVC.swift */; };
 		ECDD316423D2252200BF8FEB /* QRCodeViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD316323D2252200BF8FEB /* QRCodeViewerViewModel.swift */; };
 		ECDD316623D2253800BF8FEB /* QRCodeViewerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */; };
@@ -72,6 +73,7 @@
 		ECA9746523CCD9A6006A2FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECA9746723CCD9A6006A2FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECBD3FEF23D32B80004B2CCB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ECBD3FF023D33028004B2CCB /* QRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
 		ECD72E1823D2242D00952A18 /* QRCodeViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerVC.swift; sourceTree = "<group>"; };
 		ECDD316323D2252200BF8FEB /* QRCodeViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerViewModel.swift; sourceTree = "<group>"; };
 		ECDD316523D2253800BF8FEB /* QRCodeViewerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewerModel.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		ECDD316B23D23DA400BF8FEB /* QR Code Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				ECBD3FF023D33028004B2CCB /* QRCodeGenerator.swift */,
 				ECDD316723D22BBE00BF8FEB /* QRCodeViewerCoordinator.swift */,
 				ECD72E1823D2242D00952A18 /* QRCodeViewerVC.swift */,
 				ECDD316323D2252200BF8FEB /* QRCodeViewerViewModel.swift */,
@@ -379,6 +382,7 @@
 				EC57BB2C23D09B810024BF5A /* SetupModel.swift in Sources */,
 				EC7FB30A23D2461200973854 /* VerificationViewModel.swift in Sources */,
 				ECDD316A23D2372200BF8FEB /* Address.swift in Sources */,
+				ECBD3FF123D33028004B2CCB /* QRCodeGenerator.swift in Sources */,
 				EC57BB4023D1FBF30024BF5A /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
