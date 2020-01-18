@@ -35,21 +35,34 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdA-08-dOK">
-                                <rect key="frame" x="176" y="158.5" width="62" height="30"/>
-                                <state key="normal" title="Continue"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZp-qa-imL" customClass="RoundedButton" customModule="Gnosis_Task">
+                                <rect key="frame" x="52" y="153.5" width="310.5" height="50"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.14117647059999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UuM-Dd-1Gl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="continueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ODi-H3-WMR"/>
+                                    <action selector="continueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I6f-wV-viO"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NdA-08-dOK" firstAttribute="top" secondItem="35E-aD-mWq" secondAttribute="bottom" constant="25" id="7C1-r1-eiv"/>
+                            <constraint firstItem="CZp-qa-imL" firstAttribute="centerX" secondItem="35E-aD-mWq" secondAttribute="centerX" id="8IA-cd-27k"/>
                             <constraint firstItem="35E-aD-mWq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D09-en-dI6"/>
-                            <constraint firstItem="NdA-08-dOK" firstAttribute="centerX" secondItem="35E-aD-mWq" secondAttribute="centerX" id="OPd-P2-WZK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="35E-aD-mWq" secondAttribute="trailing" constant="20" id="aan-2z-yh6"/>
                             <constraint firstItem="35E-aD-mWq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eZA-nm-N50"/>
+                            <constraint firstItem="CZp-qa-imL" firstAttribute="top" secondItem="35E-aD-mWq" secondAttribute="bottom" constant="20" id="nim-Kf-FAo"/>
+                            <constraint firstItem="CZp-qa-imL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="otj-00-S59"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
