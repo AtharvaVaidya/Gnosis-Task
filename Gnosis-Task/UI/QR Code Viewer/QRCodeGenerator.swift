@@ -10,7 +10,7 @@ import UIKit
 import Combine
 
 class QRCodeGenerator {
-    func generateImage(with data: Data, size: CGSize) -> Future<UIImage, QRCodeGenerationError> {
+    static func generateImage(with data: Data, size: CGSize) -> Future<UIImage, QRCodeGenerationError> {
         return Future<UIImage, QRCodeGenerationError> { promise in
             let backgroundQueue = DispatchQueue.global(qos: .userInteractive)
             
