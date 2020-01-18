@@ -8,13 +8,17 @@
 
 import UIKit
 import AVFoundation
+import Combine
 
-class VerificationVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class VerificationVC: UIViewController {
     let captureSession = AVCaptureSession()
     let videoLayer = AVCaptureVideoPreviewLayer()
     let qrCodeFrameView = UIView()
+    let cameraView = UIView()
     
     let viewModel: VerificationViewModel
+    
+    private var cancellables: Set<AnyCancellable> = []
     
     init(viewModel: VerificationViewModel) {
         self.viewModel = viewModel
@@ -29,76 +33,88 @@ class VerificationVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "QR Code Scanner"
+        
+        addSubviews()
+        makeConstraints()
+        setupViews()
+        
         startCameraSession()
-        setupQRCodeFrameView()
     }
     
-    func setupQRCodeFrameView() {
-        qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-        qrCodeFrameView.layer.borderWidth = 2
+    private func setupViews() {
+        view.backgroundColor = .systemBackground
+    }
+    
+    private func addSubviews() {
+        view.addSubview(cameraView)
+    }
+    
+    private func makeConstraints() {
+        cameraView.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(qrCodeFrameView)
-        view.bringSubviewToFront(qrCodeFrameView)
+        let layoutGuide = view.safeAreaLayoutGuide
+        
+        let constraints = [cameraView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor),
+                           cameraView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor),
+                           cameraView.topAnchor.constraint(equalTo: layoutGuide.topAnchor),
+                           cameraView.bottomAnchor.constraint(equalTo: view.bottomAnchor)]
+        
+        NSLayoutConstraint.activate(constraints)
     }
     
     func startCameraSession() {
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .back)
-         
-        guard let captureDevice = deviceDiscoverySession.devices.first else {
-            print("Failed to get the camera device")
-            return
-        }
-         
-        do {
-            // Get an instance of the AVCaptureDeviceInput class using the previous device object.
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-            
-            // Set the input device on the capture session.
-            captureSession.addInput(input)
-            
-            // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
-            let captureMetadataOutput = AVCaptureMetadataOutput()
-            captureSession.addOutput(captureMetadataOutput)
-            
-            // Set delegate and use the default dispatch queue to execute the call back
-            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: .main)
-            captureMetadataOutput.metadataObjectTypes = [.qr]
-            
-            // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
-            videoLayer.session = captureSession
-            videoLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            videoLayer.frame = view.layer.bounds
-            view.layer.addSublayer(videoLayer)
-            
-            captureSession.startRunning()
-        } catch {
-            print(error)
+        DispatchQueue.global(qos: .userInteractive).async {
+            let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .back)
+             
+            guard let captureDevice = deviceDiscoverySession.devices.first else {
+                print("Failed to get the camera device")
+                return
+            }
+             
+            do {
+                let input = try AVCaptureDeviceInput(device: captureDevice)
+                
+                self.captureSession.addInput(input)
+                
+                let captureMetadataOutput = AVCaptureMetadataOutput()
+                self.captureSession.addOutput(captureMetadataOutput)
+                
+                captureMetadataOutput.setMetadataObjectsDelegate(self.viewModel, queue: .global(qos: .default))
+                captureMetadataOutput.metadataObjectTypes = [.qr, .ean13]
+                
+                self.captureSession.startRunning()
+                
+                DispatchQueue.main.async {
+                    self.videoLayer.session = self.captureSession
+                    self.videoLayer.videoGravity = .resizeAspectFill
+                    self.videoLayer.frame = self.cameraView.layer.bounds
+                    self.cameraView.layer.addSublayer(self.videoLayer)
+                }
+            } catch {
+                print(error)
+            }
         }
     }
-}
-
-extension VerificationVC {
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        if metadataObjects.isEmpty {
-            qrCodeFrameView.frame = .zero
-            return
+    
+    //MARK:- Bindings
+    func observeModel() {
+        viewModel.foundSignedMessage
+        .receive(on: RunLoop.main)
+        .sink { signedMessage in
+            self.showAlert(title: "Signature is valid", message: signedMessage)
+        }
+        .store(in: &cancellables)
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            alertController.dismiss(animated: true, completion: nil)
         }
         
-        guard let metadataObj = metadataObjects[0] as? AVMetadataMachineReadableCodeObject else {
-            return
-        }
-                
-        switch metadataObj.type {
-        case .qr:
-            if let qrCodeData = metadataObj.stringValue?.data(using: .utf8) {
-                viewModel.foundQRCode(data: qrCodeData)
-            }
-            
-            if let barCodeObject = videoLayer.transformedMetadataObject(for: metadataObj) {
-                qrCodeFrameView.frame = barCodeObject.bounds
-            }
-        default:
-            break
-        }
+        alertController.addAction(okAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }

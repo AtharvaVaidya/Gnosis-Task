@@ -8,13 +8,18 @@
 
 import UIKit
 import web3swift
+import CryptoSwift
 
 enum MessageSignError: Error {
     case noInternet
+    case dataEncodingError
+    case signatureCreationError
     
     var localizedDescription: String {
         switch self {
         case .noInternet: return "No Internet Connection"
+        case .dataEncodingError: return "Could not encode data"
+        case .signatureCreationError: return "Could not sign the message."
         }
     }
 }
@@ -28,7 +33,7 @@ class MessageSignViewModel {
     
     var message: String { model.message }
     
-    func signedMessage() throws -> Data {        
+    func signedMessage() throws -> Data {
         guard let provider = InfuraProvider(.Rinkeby) else {
             throw MessageSignError.noInternet
         }
@@ -44,10 +49,19 @@ class MessageSignViewModel {
         web3Obj.addKeystoreManager(keystoreManager)
         
         let wallet = web3.Web3Wallet(provider: provider, web3: web3Obj)
+                
+        guard let messageData = model.message.data(using: .ascii) else {
+            throw MessageSignError.dataEncodingError
+        }
         
-        let signedMessage = try wallet.signPersonalMessage(model.message.data(using: .utf8)!, account: model.address.ethereumAddress)
+        let signedMessageData = try wallet.signPersonalMessage(messageData, account: model.address.ethereumAddress)
+        let signedMessageHex = signedMessageData.toHexString()
         
-        return signedMessage
+        print("signed message hex string: \(signedMessageHex)")
+        
+        let signedStringData = Data(signedMessageHex.utf8)
+        
+        return signedStringData
     }
     
     func change(message: String) {

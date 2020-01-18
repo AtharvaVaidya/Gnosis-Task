@@ -13,6 +13,8 @@ class VerificationModel {
     
     private let address: EthAddressInfo
     
+    @Published var decodeMessage: String?
+    
     init(address: EthAddressInfo) {
         self.address = address
     }

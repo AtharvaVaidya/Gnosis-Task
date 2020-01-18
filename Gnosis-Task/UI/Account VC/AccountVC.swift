@@ -40,6 +40,6 @@ class AccountVC: UIViewController, Storyboarded {
     }
     
     @IBAction func verifyPressed(_ sender: Any) {
-        
+        coordinator?.verify()
     }
 }

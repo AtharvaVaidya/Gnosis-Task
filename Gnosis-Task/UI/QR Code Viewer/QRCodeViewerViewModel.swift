@@ -31,7 +31,7 @@ class QRCodeViewerViewModel {
                 let filter = CIFilter.qrCodeGenerator
                 
                 filter.setValue(model.data, forKey: CIFilterAtrributes.inputMessage.rawValue)
-                filter.setValue(CIFilterInputCorrectionValues.h.rawValue, forKey: CIFilterAtrributes.inputCorrectionLevel.rawValue)
+//                filter.setValue(CIFilterInputCorrectionValues.h.rawValue, forKey: CIFilterAtrributes.inputCorrectionLevel.rawValue)
                 
                 guard let outputImage = filter.outputImage else {
                     promise(.failure(.unableToCreateImage))

@@ -40,4 +40,9 @@ class AccountCoordinator: Coordinator {
         let messageSignCoordinator = MessageSignCoordinator(address: address, navigationController: navigationController)
         messageSignCoordinator.start()
     }
+    
+    func verify() {
+        let verificationCoordinator = VerificationCoordinator(address: address, navigationController: navigationController)
+        verificationCoordinator.start()
+    }
 }
