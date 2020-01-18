@@ -102,6 +102,7 @@ class VerificationVC: UIViewController {
     //MARK:- Bindings
     private func observeModel() {
         viewModel.foundSignedMessage
+        .dropFirst()
         .receive(on: RunLoop.main)
         .sink { isValidSignature in
             if isValidSignature {
