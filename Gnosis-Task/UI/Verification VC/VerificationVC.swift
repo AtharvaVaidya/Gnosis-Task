@@ -13,7 +13,6 @@ import Combine
 class VerificationVC: UIViewController {
     let captureSession = AVCaptureSession()
     let videoLayer = AVCaptureVideoPreviewLayer()
-    let qrCodeFrameView = UIView()
     let cameraView = UIView()
     
     let viewModel: VerificationViewModel
@@ -65,8 +64,9 @@ class VerificationVC: UIViewController {
         NSLayoutConstraint.activate(constraints)
     }
     
-    func startCameraSession() {
-        DispatchQueue.global(qos: .userInteractive).async {
+    private func startCameraSession() {
+        let backgroundQueue = DispatchQueue.global(qos: .userInteractive)
+        backgroundQueue.async {
             let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .back)
              
             guard let captureDevice = deviceDiscoverySession.devices.first else {
@@ -83,7 +83,7 @@ class VerificationVC: UIViewController {
                 self.captureSession.addOutput(captureMetadataOutput)
                 
                 captureMetadataOutput.setMetadataObjectsDelegate(self.viewModel, queue: .global(qos: .default))
-                captureMetadataOutput.metadataObjectTypes = [.qr, .ean13]
+                captureMetadataOutput.metadataObjectTypes = [.qr]
                 
                 self.captureSession.startRunning()
                 
@@ -100,7 +100,7 @@ class VerificationVC: UIViewController {
     }
     
     //MARK:- Bindings
-    func observeModel() {
+    private func observeModel() {
         viewModel.foundSignedMessage
         .receive(on: RunLoop.main)
         .sink { isValidSignature in

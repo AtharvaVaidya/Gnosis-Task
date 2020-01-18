@@ -85,8 +85,8 @@ class QRCodeViewerVC: UIViewController {
     func generateImage() {
         let referenceSize = qrCodeView.bounds.size
         
-        let width = referenceSize.width * 0.75
-        let height = referenceSize.height * 0.5
+        let width = referenceSize.width * 0.5
+        let height = width
         
         let size = CGSize(width: width, height: height)
         

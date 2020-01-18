@@ -38,9 +38,10 @@ class MessageSignViewModel {
             throw MessageSignError.noInternet
         }
         
-        guard let data = Data.fromHex(model.address.privateKey),
+        guard
+            let data = Data.fromHex(model.address.privateKey),
             let keystore = try EthereumKeystoreV3(privateKey: data) else {
-            return Data()
+            throw MessageSignError.dataEncodingError
         }
         
         let keystoreManager = KeystoreManager([keystore])
@@ -57,7 +58,6 @@ class MessageSignViewModel {
         let signedMessageData = try wallet.signPersonalMessage(messageData, account: model.address.ethereumAddress)
         let signedMessageHex = signedMessageData.toHexString()
         
-        print("signed message hex string: \(signedMessageHex)")
         let signedQRCode = "\(signedMessageHex)/\(model.message)"
         let signedStringData = Data(signedQRCode.utf8)
         

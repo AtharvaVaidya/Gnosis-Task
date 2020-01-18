@@ -62,8 +62,6 @@ class VerificationViewModel: NSObject {
         
         let personalMessage = String(qrCode[startIndexOfPersonalMessage..<qrCode.endIndex])
         
-        print("Personal message: \(personalMessage)")
-        
         let signature = Data(hex: signedHexString)
         
         let web3 = Web3.InfuraRinkebyWeb3()
