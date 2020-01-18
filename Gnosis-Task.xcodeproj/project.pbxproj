@@ -108,13 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		82B2198772A5EEFF4663C7B8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		EC57BB4123D200B40024BF5A /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +159,6 @@
 				ECBD3FEF23D32B80004B2CCB /* README.md */,
 				ECA9745523CCD9A5006A2FA8 /* Gnosis-Task */,
 				ECA9745423CCD9A5006A2FA8 /* Products */,
-				82B2198772A5EEFF4663C7B8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};

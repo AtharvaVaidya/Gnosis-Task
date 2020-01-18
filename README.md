@@ -14,5 +14,6 @@
 ## Notes 
 
 1. The app follows the MVVM pattern, aided by Coordinators.
-2. The project follows SOLID priniciples as much as possible. The views are dependency-injectable, and s 
+2. The project follows SOLID priniciples as much as possible. The views are dependency-injectable, and objects have a single defined responsibility.
+3. Although I haven't written any tests because of time constraints, the app is structured to be completely testable.
 
